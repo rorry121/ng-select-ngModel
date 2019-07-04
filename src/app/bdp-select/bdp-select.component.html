@@ -1,0 +1,16 @@
+<section class="select-container">
+  <article class="select-value" (click)="showList = !showList">
+    <span>{{value || '请选择'}}</span>
+    <i class="bdp-icon ico-triangle-down"></i>
+  </article>
+  <article class="select-search query-box auto" *ngIf="showList">
+    <div class="search-input" *ngIf="optionList.length > 3">
+      <input type="text" class="query-text">
+    </div>
+    <div class="search-list">
+      <ul>
+        <li *ngFor="let item of optionList" (click)="writeValue(item[itemKey])">{{item[itemKey]}}</li>
+      </ul>
+    </div>
+  </article>
+</section>

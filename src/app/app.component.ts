@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'select-search';
+  title = 'bdp-select';
+  list = [{
+    name: 1,
+    value: 1,
+  },
+    {
+      name: 2,
+      value: 2,
+    },
+    {
+      name: 3,
+      value: 4,
+    },
+    {
+      name: 4,
+      value: 4,
+    }];
+  show() {
+    console.log(this.title);
+  }
 }
